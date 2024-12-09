@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form is Successfully Submitted</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <div class="middle-column">
+        <h3 style="text-align: center;">Form is Successfully Submitted</h4>
+            <p style="color:#663434;margin:10px"> You just submit the form </p>
+            <a style="margin:10px" href="/edit-form/:No" id="render-link">Edit this form!!</a>
+    </div>
+    <script>
+        document.getElementById("render-link").addEventListener("click", function (event) {
+            event.preventDefault();  // Prevent the default anchor behavior
+            window.location.href = "/edit-form/:No";  // Navigate to the route
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

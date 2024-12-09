@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form </title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <form action="/update/<%= item.University_Registration_No %>" method="post">
+    <div class="container">
+      <div class="left-column">
+        <h2>Course End Survey - Academic Session 2022-2023 - Semester -IV -Data Science</h4>
+          <h1 style="text-align: center;">BRAINWARE UNIVERSITY</h1>
+          <p class="right_align">
+            398, Ramkrishnapur Road,Barasat,Near Jagadighata Market Kolkata,West Bengal 700125
+          </p>
+          <h2 class="right_align">Data Science (4th Semester)</h2>
+          <h2 class="right_align">Department of Computer Science and Engineering - CS & DS</h2>
+          <h2 class="right_align">SEMESTER - IV</h2>
+      </div>
+      <div class="right-column">
+        <div class="Student_Name style">
+          <h4>1. Name of Student </label><br>
+            <input type="text" id="Student_Name" name="Student_Name" value="<%= item.Student_Name %>" required>
+        </div>
+        <div class="Section style">
+          <h4>1. Name of Student </label><br>
+            <select class="Select" name="option" value="<%= item.option %>">
+              <option value="" disabled selected>Choose your Section</option>
+              <option value="Section-A">Section-A</option>
+              <option value="Section-B">Section-B</option>
+              <option value="Section-C">Section-C</option>
+              <option value="Section-D">Section-D</option>
+            </select>
+        </div>
+        <div class="University_Regis_No style">
+          <h4>3.University Registration No </label><br>
+            <input type="text" id="University_Regis_No" name="University_Registration_No"
+              value="<%= item.University_Registration_No %>" required>
+        </div>
+        <div class="University_Roll_No style">
+          <h4>4. University Roll No </label><br>
+            <input type="text" id="University_Roll_No" name="University_Roll_No" value="<%= item.University_Roll_No %>"
+              required>
+        </div>
+        <div class="Mobile_No  style">
+          <h4>5. Mobile No</label><br>
+            <input type="text" id="Mobile_No" name="Mobile_No" value="<%= item.Mobile_No %>" required>
+        </div>
+        <div class="University_Email_No style">
+          <h4>6. University Email No </label><br>
+            <input type="text" id="University_Email_No" name="University_Email_No"
+              value="<%= item.University_Email_No %>" required>
+        </div>
+      </div>
+    </div>
+    <button>Submit</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
