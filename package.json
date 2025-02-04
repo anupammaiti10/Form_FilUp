@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node script.js"
   },
-  "author": "",
+  "author": "Anupam Maiti",
   "license": "ISC",
   "keywords": [],
   "description": ""
