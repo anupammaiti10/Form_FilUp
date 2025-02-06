@@ -11,6 +11,6 @@ let userSchema = new mongoose.Schema({
   Mobile_No: String,
   University_Email_No: String,
 });
-
+ 
 module.exports = mongoose.model("users", userSchema);
 // module.exports = connect;
