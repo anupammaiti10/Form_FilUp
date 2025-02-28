@@ -2,13 +2,13 @@ const express = require("express");
 const { body, validationResult } = require("express-validator");
 const app = express();
 const router = express.Router();
-const userModel = require("./models/db.js");
+const userModel = require("./db/db.js");
 // const ejs = require("ejs");
 // const submit=ejs.require("./views/submitted_Form")
 const port = process.env.PORT || 3000;
 //for form fill up this midddware is used
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));         
 
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
@@ -64,7 +64,7 @@ app.post(
 
 app.get("/edit-form/:No", async (req, res) => {
   const registrationId = String(req.params.No); // Fetching the parameter from the route
-  try {
+  try {         
     // Fetch the item by University_Registration_No or _id
     const item = await userModel.findOne({
       University_Registration_No: registrationId,
@@ -82,7 +82,7 @@ app.get("/edit-form/:No", async (req, res) => {
 });
 
 app.post("/update/:No", async (req, res) => {
-  const itemId = String(req.params.No); // Fetching the parameter from the route
+  const itemId = String(req.params.No); // Fetching the parameter from the route to update the item
 
   const {
     Student_Name,
